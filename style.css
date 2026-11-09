@@ -4,11 +4,10 @@
 :root {
   --maroon: #500000;       /* main accent and heading color */
   --maroon-dark: #3C0000;  /* accent, use sparingly (link hover) */
-  --maroon-light: #732F2F; /* accent, use sparingly */
+  --maroon-light: #732F2F; /* wave layers (written as %23732F2F inside the SVGs below) */
   --white: #FFFFFF;
   --gray-100: #F6F6F6;     /* light background bands */
   --gray-300: #D1D1D1;     /* thin rules and dividers */
-  --gray-500: #707070;     /* form field borders only, not text */
   --gray-700: #3E3E3E;     /* secondary text */
   --gray-900: #202020;     /* body text */
 
@@ -64,18 +63,13 @@ a:hover {
   color: var(--maroon-dark);
 }
 
-/* Visible focus on every interactive element */
+/* Visible focus on links */
 a:focus {
   outline: 3px solid var(--maroon);
   outline-offset: 2px;
 }
 
-/* Header */
-.site-header {
-  background: var(--white);
-  border-bottom: 4px solid var(--maroon);
-}
-
+/* Header (its maroon line or wave band is in the screen-size rules at the end) */
 .header-inner {
   padding-top: 1.5rem;
   padding-bottom: 1.25rem;
@@ -162,13 +156,13 @@ h2::after {
 /* Wide screens: solid Aggie Maroon on both sides with a layered wavy
    edge running down the page. A Maroon Light wave sits behind the Maroon
    wave as a band of varying thickness, to soften the step from maroon to
-   white. The waves turn every 500px but reach out by different amounts, and the pattern repeats every
-   3000px. The right side is a mirror of the left, shifted down 1250px, so
-   the two sides do not line up. The white area is 66rem wide (wider than
-   the 54rem text column), plus the wave curves. */
+   white. The waves turn every 500px but reach out by different amounts,
+   and the pattern repeats every 3000px. The right side is a mirror of the
+   left, shifted down 1250px, so the two sides do not line up. The white
+   area is 66rem wide (wider than the 54rem text column), plus the wave
+   curves. */
 @media (min-width: 85rem) {
   body {
-    background-color: var(--white);
     background-image:
       linear-gradient(var(--maroon), var(--maroon)),
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='3000'%3E%3Cg%3E%3Cpath d='M0 0H145C145 250 202 250 202 500C202 750 165 750 165 1000C165 1250 218 1250 218 1500C218 1750 145 1750 145 2000C145 2250 195 2250 195 2500C195 2750 145 2750 145 3000H0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0H35C35 250 112 250 112 500C112 750 35 750 35 1000C35 1250 118 1250 118 1500C118 1750 25 1750 25 2000C25 2250 105 2250 105 2500C105 2750 35 2750 35 3000H0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E"),
@@ -191,8 +185,6 @@ h2::after {
      the waves never reach) so it does not run across the waves. */
   .site-header {
     position: relative;
-    background: transparent;
-    border-bottom: 0;
   }
 
   .site-header::after {
@@ -216,10 +208,6 @@ h2::after {
    line under the header, and a matching band (flipped) sits on top of the
    footer. The bands sit above and below the content, never behind text. */
 @media (max-width: 84.9375rem) {
-  .site-header {
-    border-bottom: 0;
-  }
-
   .site-header::after {
     content: "";
     display: block;
