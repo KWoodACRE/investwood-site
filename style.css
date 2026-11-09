@@ -1,0 +1,230 @@
+/* InvestWood Capital site styles */
+
+/* Colors: official university brand palette, taken from its brand guide. */
+:root {
+  --maroon: #500000;       /* main accent and heading color */
+  --maroon-dark: #3C0000;  /* accent, use sparingly (link hover) */
+  --maroon-light: #732F2F; /* wave layers (written as %23732F2F inside the SVGs below) */
+  --white: #FFFFFF;
+  --gray-100: #F6F6F6;     /* light background bands */
+  --gray-300: #D1D1D1;     /* thin rules and dividers */
+  --gray-500: #707070;
+  --gray-700: #3E3E3E;     /* secondary text */
+  --gray-900: #202020;     /* body text */
+
+  --font-heading: "Oswald", "Arial Narrow", Arial, sans-serif;
+  --font-body: "Open Sans", "Segoe UI", Arial, sans-serif;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--white);
+  color: var(--gray-900);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+}
+
+.container {
+  max-width: 54rem;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--maroon);
+  line-height: 1.2;
+}
+
+p {
+  max-width: 65ch;
+  margin: 0 0 1rem;
+}
+
+/* Links */
+a {
+  color: var(--maroon);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--maroon-dark);
+}
+
+/* Visible focus on links */
+a:focus {
+  outline: 3px solid var(--maroon);
+  outline-offset: 2px;
+}
+
+/* Header (its maroon line or wave band is in the screen-size rules at the end) */
+.header-inner {
+  padding-top: 1.5rem;
+  padding-bottom: 1.25rem;
+}
+
+.site-title {
+  margin: 0;
+  line-height: 0;
+}
+
+/* Logo scales down on narrow screens and never overflows. */
+.site-title img {
+  display: block;
+  width: 100%;
+  max-width: 26rem;
+  height: auto;
+}
+
+/* Sections */
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+section:last-child {
+  border-bottom: 0;
+}
+
+h2 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.5rem, 4vw, 1.875rem);
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-top: 0.5rem;
+  background: var(--maroon);
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.55;
+}
+
+/* Major Projects */
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+.project-list li {
+  min-width: 0;
+  padding: 0.875rem 1rem 0.875rem 1.25rem;
+  background: var(--gray-100);
+  border-left: 3px solid var(--maroon);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--gray-100);
+  color: var(--gray-700);
+  font-size: 0.875rem;
+  padding: 2rem 0;
+}
+
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Wide screens: solid Aggie Maroon on both sides with a layered wavy
+   edge running down the page. A Maroon Light wave sits behind the Maroon
+   wave as a band of varying thickness, to soften the step from maroon to
+   white. The waves turn every 500px but reach out by different amounts,
+   and the pattern repeats every 3000px. The right side is a mirror of the
+   left, shifted down 1250px, so the two sides do not line up. The white
+   area is 66rem wide (wider than the 54rem text column), plus the wave
+   curves. */
+@media (min-width: 85rem) {
+  body {
+    background-image:
+      linear-gradient(var(--maroon), var(--maroon)),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='3000'%3E%3Cg%3E%3Cpath d='M0 0H145C145 250 202 250 202 500C202 750 165 750 165 1000C165 1250 218 1250 218 1500C218 1750 145 1750 145 2000C145 2250 195 2250 195 2500C195 2750 145 2750 145 3000H0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0H35C35 250 112 250 112 500C112 750 35 750 35 1000C35 1250 118 1250 118 1500C118 1750 25 1750 25 2000C25 2250 105 2250 105 2500C105 2750 35 2750 35 3000H0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='3000'%3E%3Cg transform='matrix(-1 0 0 1 240 0)'%3E%3Cpath d='M0 0H145C145 250 202 250 202 500C202 750 165 750 165 1000C165 1250 218 1250 218 1500C218 1750 145 1750 145 2000C145 2250 195 2250 195 2500C195 2750 145 2750 145 3000H0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0H35C35 250 112 250 112 500C112 750 35 750 35 1000C35 1250 118 1250 118 1500C118 1750 25 1750 25 2000C25 2250 105 2250 105 2500C105 2750 35 2750 35 3000H0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E"),
+      linear-gradient(var(--maroon), var(--maroon));
+    background-size:
+      calc(50% - 33rem - 239px) 100%,
+      240px 3000px,
+      240px 3000px,
+      calc(50% - 33rem - 239px) 100%;
+    background-position:
+      left top,
+      calc(50% - 33rem - 120px) 0,
+      calc(50% + 33rem + 120px) 1250px,
+      right top;
+    background-repeat: repeat-y;
+  }
+
+  /* The header line stops at the edge of the white area (66rem, which
+     the waves never reach) so it does not run across the waves. */
+  .site-header {
+    position: relative;
+  }
+
+  .site-header::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 66rem;
+    height: 4px;
+    margin-left: -33rem;
+    background: var(--maroon);
+  }
+
+  .header-inner {
+    padding-bottom: calc(1.25rem + 4px);
+  }
+}
+
+/* Phones, tablets and smaller laptops (where the side waves do not show):
+   a tall layered Maroon and Maroon Light wave band replaces the straight
+   line under the header, and a matching band (flipped) sits on top of the
+   footer. The bands sit above and below the content, never behind text. */
+@media (max-width: 84.9375rem) {
+  .site-header::after {
+    content: "";
+    display: block;
+    height: 130px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='130'%3E%3Cg%3E%3Cpath d='M0 0V105C50 105 50 124 100 124C150 124 150 92 200 92C250 92 250 120 300 120C350 120 350 105 400 105V0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0V79C50 79 50 104 100 104C150 104 150 64 200 64C250 64 250 98 300 98C350 98 350 79 400 79V0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E") left top / 400px 130px repeat-x;
+  }
+
+  .site-footer {
+    padding-top: 0;
+  }
+
+  .site-footer::before {
+    content: "";
+    display: block;
+    height: 130px;
+    margin-bottom: 2rem;
+    background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='130'%3E%3Cg transform='matrix(1 0 0 -1 0 130)'%3E%3Cpath d='M0 0V105C50 105 50 124 100 124C150 124 150 92 200 92C250 92 250 120 300 120C350 120 350 105 400 105V0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0V79C50 79 50 104 100 104C150 104 150 64 200 64C250 64 250 98 300 98C350 98 350 79 400 79V0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E") left top / 400px 130px repeat-x;
+  }
+}
