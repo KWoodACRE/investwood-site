@@ -109,7 +109,15 @@ button:focus {
 
 .site-title {
   margin: 0 0 0.75rem;
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 0;
+}
+
+/* Logo scales down on narrow screens and never overflows. */
+.site-title img {
+  display: block;
+  width: 100%;
+  max-width: 26rem;
+  height: auto;
 }
 
 .site-nav {
