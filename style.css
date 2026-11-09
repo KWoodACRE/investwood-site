@@ -214,3 +214,26 @@ button:focus {
 .site-footer p {
   margin: 0;
 }
+
+/* Wide screens: subtle maroon wave pattern in the side space.
+   The content column stays white so text is always on a plain background. */
+@media (min-width: 64rem) {
+  body {
+    background-color: var(--white);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40'%3E%3Cpath d='M0 20 Q15 8 30 20 T60 20 T90 20 T120 20' fill='none' stroke='%23500000' stroke-opacity='0.14' stroke-width='2'/%3E%3C/svg%3E");
+    background-size: 120px 40px;
+  }
+
+  .site-header {
+    background: transparent;
+  }
+
+  .header-inner,
+  main .container {
+    background: var(--white);
+  }
+
+  main .container {
+    padding-bottom: 1rem;
+  }
+}
