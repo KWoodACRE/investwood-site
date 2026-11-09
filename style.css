@@ -212,8 +212,8 @@ h2::after {
 }
 
 /* Phones, tablets and smaller laptops (where the side waves do not show):
-   a layered Maroon and Maroon Light wave band replaces the straight line
-   under the header, and a matching band (flipped) sits on top of the
+   a tall layered Maroon and Maroon Light wave band replaces the straight
+   line under the header, and a matching band (flipped) sits on top of the
    footer. The bands sit above and below the content, never behind text. */
 @media (max-width: 84.9375rem) {
   .site-header {
@@ -223,8 +223,8 @@ h2::after {
   .site-header::after {
     content: "";
     display: block;
-    height: 40px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='40'%3E%3Cg%3E%3Cpath d='M0 0V30C50 30 50 40 100 40C150 40 150 26 200 26C250 26 250 38 300 38C350 38 350 30 400 30V0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0V14C50 14 50 28 100 28C150 28 150 8 200 8C250 8 250 24 300 24C350 24 350 14 400 14V0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E") left top / 400px 40px repeat-x;
+    height: 90px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='90'%3E%3Cg%3E%3Cpath d='M0 0V70C50 70 50 86 100 86C150 86 150 60 200 60C250 60 250 82 300 82C350 82 350 70 400 70V0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0V48C50 48 50 70 100 70C150 70 150 36 200 36C250 36 250 64 300 64C350 64 350 48 400 48V0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E") left top / 400px 90px repeat-x;
   }
 
   .site-footer {
@@ -234,8 +234,8 @@ h2::after {
   .site-footer::before {
     content: "";
     display: block;
-    height: 40px;
+    height: 90px;
     margin-bottom: 2rem;
-    background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='40'%3E%3Cg transform='matrix(1 0 0 -1 0 40)'%3E%3Cpath d='M0 0V30C50 30 50 40 100 40C150 40 150 26 200 26C250 26 250 38 300 38C350 38 350 30 400 30V0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0V14C50 14 50 28 100 28C150 28 150 8 200 8C250 8 250 24 300 24C350 24 350 14 400 14V0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E") left top / 400px 40px repeat-x;
+    background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='90'%3E%3Cg transform='matrix(1 0 0 -1 0 90)'%3E%3Cpath d='M0 0V70C50 70 50 86 100 86C150 86 150 60 200 60C250 60 250 82 300 82C350 82 350 70 400 70V0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0V48C50 48 50 70 100 70C150 70 150 36 200 36C250 36 250 64 300 64C350 64 350 48 400 48V0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E") left top / 400px 90px repeat-x;
   }
 }
