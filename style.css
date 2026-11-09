@@ -21,12 +21,6 @@
   box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
 body {
   margin: 0;
   overflow-x: hidden;
@@ -77,23 +71,6 @@ textarea:focus,
 button:focus {
   outline: 3px solid var(--maroon);
   outline-offset: 2px;
-}
-
-/* Skip link: hidden until focused */
-.skip-link {
-  position: absolute;
-  left: 1rem;
-  top: -10rem;
-  z-index: 10;
-  padding: 0.5rem 1rem;
-  background: var(--white);
-  color: var(--maroon);
-  border: 2px solid var(--maroon);
-  font-weight: 600;
-}
-
-.skip-link:focus {
-  top: 1rem;
 }
 
 /* Header */
