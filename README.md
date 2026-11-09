@@ -57,7 +57,7 @@ Please keep these rules when editing. They apply to all text on the site, includ
 
 - **No em dashes** anywhere. Use a comma, a period, or a plain hyphen.
 - Use curly quotes and apostrophes in visible text (“ ” ’), not straight ones (" '). Straight quotes are only for the code itself, such as `href="..."`.
-- The company name is written **InvestWood Capital** with a capital W. The legal name in the footer and contact section is **InvestWood Capital, LLC**.
+- The company name is written **InvestWood Capital** with a capital W. The legal name in the footer is **InvestWood Capital, LLC**.
 - Do not add other branding, logos, links, or company names to the site.
 - Do not add analytics or tracking scripts.
 - Do not add a street address, phone number, or fax number unless the site owner supplies confirmed current ones.
@@ -105,7 +105,7 @@ All of these are defined once at the top of `style.css`. To change a color every
 
 Fonts come from Google Fonts, the only third-party service the page loads. They are Texas A&M brand fonts:
 
-- **Oswald** for headings and navigation (shown in capital letters by the stylesheet).
+- **Oswald** for headers (shown in capital letters by the stylesheet).
 - **Open Sans** for body text.
 
 If Google Fonts is unavailable, the page falls back to Arial or a similar system font and remains readable.
