@@ -216,25 +216,27 @@ button:focus {
 }
 
 /* Wide screens: solid Aggie Maroon on both sides with a wavy edge
-   running down the page. The center column (54rem, same as .container)
-   stays white so all text sits on white. */
-@media (min-width: 64rem) {
+   running down the page. The waves vary in size and spacing and repeat
+   every 1600px. The right side is a mirror of the left, shifted down,
+   so the two sides do not line up. The white area is 60rem wide
+   (wider than the 54rem text column), plus the wave curves. */
+@media (min-width: 80rem) {
   body {
     background-color: var(--white);
     background-image:
       linear-gradient(var(--maroon), var(--maroon)),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='160'%3E%3Cpath d='M0 0H16Q32 40 16 80Q0 120 16 160H0Z' fill='%23500000'/%3E%3C/svg%3E"),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='160'%3E%3Cpath d='M32 0H16Q0 40 16 80Q32 120 16 160H32Z' fill='%23500000'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='1600'%3E%3Cpath d='M0 0H40C40 90 100 90 100 180C100 300 30 300 30 420C30 490 80 490 80 560C80 610 50 610 50 660C50 780 110 780 110 900C110 1025 15 1025 15 1150C15 1225 70 1225 70 1300C70 1340 55 1340 55 1380C55 1430 95 1430 95 1480C95 1540 40 1540 40 1600H0Z' fill='%23500000'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='1600'%3E%3Cpath transform='matrix(-1 0 0 1 120 0)' d='M0 0H40C40 90 100 90 100 180C100 300 30 300 30 420C30 490 80 490 80 560C80 610 50 610 50 660C50 780 110 780 110 900C110 1025 15 1025 15 1150C15 1225 70 1225 70 1300C70 1340 55 1340 55 1380C55 1430 95 1430 95 1480C95 1540 40 1540 40 1600H0Z' fill='%23500000'/%3E%3C/svg%3E"),
       linear-gradient(var(--maroon), var(--maroon));
     background-size:
-      calc(50% - 27rem - 31px) 100%,
-      32px 160px,
-      32px 160px,
-      calc(50% - 27rem - 31px) 100%;
+      calc(50% - 30rem - 119px) 100%,
+      120px 1600px,
+      120px 1600px,
+      calc(50% - 30rem - 119px) 100%;
     background-position:
       left top,
-      calc(50% - 27rem - 16px) top,
-      calc(50% + 27rem + 16px) top,
+      calc(50% - 30rem - 60px) 0,
+      calc(50% + 30rem + 60px) 700px,
       right top;
     background-repeat: repeat-y;
   }
