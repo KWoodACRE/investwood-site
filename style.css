@@ -216,27 +216,28 @@ button:focus {
 }
 
 /* Wide screens: solid Aggie Maroon on both sides with a wavy edge
-   running down the page. The waves are evenly spaced (one every 400px)
-   but reach out by different amounts, and the pattern repeats every 1600px. The right side is a mirror of the left, shifted down,
-   so the two sides do not line up. The white area is 60rem wide
+   running down the page. The waves are evenly spaced (one every 1000px)
+   but reach out by different amounts, and the pattern repeats every
+   3000px. The right side is a mirror of the left, shifted down 1250px,
+   so the two sides do not line up. The white area is 66rem wide
    (wider than the 54rem text column), plus the wave curves. */
-@media (min-width: 80rem) {
+@media (min-width: 85rem) {
   body {
     background-color: var(--white);
     background-image:
       linear-gradient(var(--maroon), var(--maroon)),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='1600'%3E%3Cpath d='M0 0H30C30 100 100 100 100 200C100 300 40 300 40 400C40 500 85 500 85 600C85 700 20 700 20 800C20 900 110 900 110 1000C110 1100 45 1100 45 1200C45 1300 95 1300 95 1400C95 1500 30 1500 30 1600H0Z' fill='%23500000'/%3E%3C/svg%3E"),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='1600'%3E%3Cpath transform='matrix(-1 0 0 1 120 0)' d='M0 0H30C30 100 100 100 100 200C100 300 40 300 40 400C40 500 85 500 85 600C85 700 20 700 20 800C20 900 110 900 110 1000C110 1100 45 1100 45 1200C45 1300 95 1300 95 1400C95 1500 30 1500 30 1600H0Z' fill='%23500000'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='3000'%3E%3Cpath d='M0 0H30C30 250 100 250 100 500C100 750 40 750 40 1000C40 1250 110 1250 110 1500C110 1750 25 1750 25 2000C25 2250 90 2250 90 2500C90 2750 30 2750 30 3000H0Z' fill='%23500000'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='3000'%3E%3Cpath transform='matrix(-1 0 0 1 120 0)' d='M0 0H30C30 250 100 250 100 500C100 750 40 750 40 1000C40 1250 110 1250 110 1500C110 1750 25 1750 25 2000C25 2250 90 2250 90 2500C90 2750 30 2750 30 3000H0Z' fill='%23500000'/%3E%3C/svg%3E"),
       linear-gradient(var(--maroon), var(--maroon));
     background-size:
-      calc(50% - 30rem - 119px) 100%,
-      120px 1600px,
-      120px 1600px,
-      calc(50% - 30rem - 119px) 100%;
+      calc(50% - 33rem - 119px) 100%,
+      120px 3000px,
+      120px 3000px,
+      calc(50% - 33rem - 119px) 100%;
     background-position:
       left top,
-      calc(50% - 30rem - 60px) 0,
-      calc(50% + 30rem + 60px) 700px,
+      calc(50% - 33rem - 60px) 0,
+      calc(50% + 33rem + 60px) 1250px,
       right top;
     background-repeat: repeat-y;
   }
