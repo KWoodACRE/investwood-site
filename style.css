@@ -223,8 +223,8 @@ h2::after {
   .site-header::after {
     content: "";
     display: block;
-    height: 90px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='90'%3E%3Cg%3E%3Cpath d='M0 0V70C50 70 50 86 100 86C150 86 150 60 200 60C250 60 250 82 300 82C350 82 350 70 400 70V0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0V48C50 48 50 70 100 70C150 70 150 36 200 36C250 36 250 64 300 64C350 64 350 48 400 48V0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E") left top / 400px 90px repeat-x;
+    height: 130px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='130'%3E%3Cg%3E%3Cpath d='M0 0V105C50 105 50 124 100 124C150 124 150 92 200 92C250 92 250 120 300 120C350 120 350 105 400 105V0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0V79C50 79 50 104 100 104C150 104 150 64 200 64C250 64 250 98 300 98C350 98 350 79 400 79V0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E") left top / 400px 130px repeat-x;
   }
 
   .site-footer {
@@ -234,8 +234,8 @@ h2::after {
   .site-footer::before {
     content: "";
     display: block;
-    height: 90px;
+    height: 130px;
     margin-bottom: 2rem;
-    background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='90'%3E%3Cg transform='matrix(1 0 0 -1 0 90)'%3E%3Cpath d='M0 0V70C50 70 50 86 100 86C150 86 150 60 200 60C250 60 250 82 300 82C350 82 350 70 400 70V0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0V48C50 48 50 70 100 70C150 70 150 36 200 36C250 36 250 64 300 64C350 64 350 48 400 48V0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E") left top / 400px 90px repeat-x;
+    background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='130'%3E%3Cg transform='matrix(1 0 0 -1 0 130)'%3E%3Cpath d='M0 0V105C50 105 50 124 100 124C150 124 150 92 200 92C250 92 250 120 300 120C350 120 350 105 400 105V0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0V79C50 79 50 104 100 104C150 104 150 64 200 64C250 64 250 98 300 98C350 98 350 79 400 79V0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E") left top / 400px 130px repeat-x;
   }
 }
