@@ -210,3 +210,32 @@ h2::after {
     padding-bottom: calc(1.25rem + 4px);
   }
 }
+
+/* Phones, tablets and smaller laptops (where the side waves do not show):
+   a layered Maroon and Maroon Light wave band replaces the straight line
+   under the header, and a matching band (flipped) sits on top of the
+   footer. The bands sit above and below the content, never behind text. */
+@media (max-width: 84.9375rem) {
+  .site-header {
+    border-bottom: 0;
+  }
+
+  .site-header::after {
+    content: "";
+    display: block;
+    height: 40px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='40'%3E%3Cg%3E%3Cpath d='M0 0V30C50 30 50 40 100 40C150 40 150 26 200 26C250 26 250 38 300 38C350 38 350 30 400 30V0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0V14C50 14 50 28 100 28C150 28 150 8 200 8C250 8 250 24 300 24C350 24 350 14 400 14V0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E") left top / 400px 40px repeat-x;
+  }
+
+  .site-footer {
+    padding-top: 0;
+  }
+
+  .site-footer::before {
+    content: "";
+    display: block;
+    height: 40px;
+    margin-bottom: 2rem;
+    background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='40'%3E%3Cg transform='matrix(1 0 0 -1 0 40)'%3E%3Cpath d='M0 0V30C50 30 50 40 100 40C150 40 150 26 200 26C250 26 250 38 300 38C350 38 350 30 400 30V0Z' fill='%23732F2F'/%3E%3Cpath d='M0 0V14C50 14 50 28 100 28C150 28 150 8 200 8C250 8 250 24 300 24C350 24 350 14 400 14V0Z' fill='%23500000'/%3E%3C/g%3E%3C/svg%3E") left top / 400px 40px repeat-x;
+  }
+}
