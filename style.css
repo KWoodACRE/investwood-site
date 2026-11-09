@@ -108,7 +108,7 @@ button:focus {
 }
 
 .site-title {
-  margin: 0 0 0.75rem;
+  margin: 0;
   line-height: 0;
 }
 
@@ -118,30 +118,6 @@ button:focus {
   width: 100%;
   max-width: 26rem;
   height: auto;
-}
-
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-}
-
-.site-nav a {
-  font-family: var(--font-heading);
-  font-weight: 500;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--gray-900);
-  text-decoration: none;
-  padding: 0.25rem 0;
-  border-bottom: 2px solid transparent;
-}
-
-.site-nav a:hover,
-.site-nav a:focus {
-  color: var(--gray-900);
-  border-bottom-color: var(--maroon);
 }
 
 /* Sections */
